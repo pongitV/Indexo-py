@@ -23,7 +23,7 @@
 </p>
 
 > [!NOTE]
-> **Indexo-py Branch**: This branch preserves the complete implementation built in Python (PySide6 / Qt) and Rust Core (PyO3). The new version of Indexo built with Rust (Tauri 2) and Svelte 5 is available on the [`main`](https://github.com/pongitV/Indexo/tree/main) branch.
+> **Indexo-py Repository**: This repository preserves the complete implementation built in Python (PySide6 / Qt) and Rust Core (PyO3). The new version of Indexo built with Rust (Tauri 2) and Svelte 5 is available in the main [`Indexo`](https://github.com/pongitV/Indexo) repository.
 
 ---
 
@@ -374,9 +374,8 @@ Indexo-py is built with zero tolerance for accidental data loss:
 ### 1. Clone the Repository
 
 ```powershell
-git clone https://github.com/pongitV/Indexo.git
-cd Indexo
-git checkout Indexo-py
+git clone https://github.com/pongitV/Indexo-py.git
+cd Indexo-py
 ```
 
 ### 2. Install Dependencies and Build the Rust Core
