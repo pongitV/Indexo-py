@@ -1,0 +1,73 @@
+# Python / Bytecode / Caches
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+build_dist/
+*.whl
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend / Tauri
+node_modules/
+src-tauri/target/
+src-tauri/gen/
+
+# PyInstaller / Portable Builds
+Portable-EXE/_internal/
+Portable-EXE/Indexo-Portable/_internal/
+Portable-EXE/Indexo-Portable/*.exe
+Portable-EXE/Indexo-Portable/*.pyd
+Portable-EXE/Indexo-Portable/*.dll
+Portable-EXE/Indexo-Portable/data/
+Portable-EXE/Indexo-Portable/configs/
+*.spec
+*.exe
+
+# Rust / Maturin / Native binaries
+target/
+*.pyd
+*.so
+*.dll
+*.dylib
+Cargo.lock
+
+# Runtime generated data, databases & local configs
+data/
+configs/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+*.log.*
+*.indexo_profile
+.indexo_restore.json
+.indexo_restore.old.json
+.indexo_restore.bak.json
+
+# Test dataset fixtures & temporary directories
+tests/fixtures/sample_dataset/
+pasta_testes_indexo/
+temp_test/
+test_output/
+
+# OS / IDE / Editor artifacts
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.lnk
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

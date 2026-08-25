@@ -1,0 +1,49 @@
+[package]
+name = "indexo_core"
+version = "0.1.0"
+edition = "2021"
+description = "Motor nativo de alta performance para o Indexo"
+authors = ["Indexo Team"]
+readme = "ARQUITETURA_CORE.md"
+license = "GPL-3.0-or-later"
+
+[lib]
+name = "indexo_core"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Bindings Python (PyO3)
+pyo3 = { version = "0.23", features = ["extension-module", "abi3-py311"] }
+
+# Paralelismo e Sistema de Arquivos
+rayon = "1.10"
+walkdir = "2.5"
+
+# Banco de Dados Local FTS5
+rusqlite = { version = "0.32", features = ["bundled", "bundled-full", "vtab"] }
+
+# Casamento de Padroes e Regex
+aho-corasick = "1.1"
+regex = "1.10"
+
+# Extracao de Metadados e Criptografia
+kamadak-exif = "0.5"
+infer = "0.16"
+encoding_rs = "0.8"
+sha2 = "0.10"
+
+# Serializacao e Utilidades
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+unicode-normalization = "0.1"
+
+[dev-dependencies]
+tempfile = "3.10"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

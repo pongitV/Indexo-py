@@ -1,0 +1,65 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "indexo_core"
+version = "0.1.0"
+description = "Motor de alto desempenho em Rust para o Organizador Semantico Indexo"
+readme = "rust-core/ARQUITETURA_CORE.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.11"
+authors = [
+    { name = "Indexo Team" }
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+[tool.maturin]
+manifest-path = "rust-core/Cargo.toml"
+module-name = "indexo_core"
+
+[tool.pytest.ini_options]
+pythonpath = ["python-app"]
+addopts = "-ra -q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "build_dist",
+    "target",
+    "Portable-EXE",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501", # line length handled by formatter
+]
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "python-app"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+exclude = [
+    "build",
+    "build_dist",
+    "target",
+]

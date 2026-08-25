@@ -1,0 +1,3 @@
+"""
+Indexo Automated Test Suite.
+"""
