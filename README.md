@@ -245,6 +245,7 @@ Indexo/
 │       │   ├── tag_discovery.py    # Aprendizado dinâmico de categorias e tags
 │       │   ├── folder_validator.py # Detecção de intrusos e validação de pastas
 │       │   ├── rule_loader.py      # Carregamento e mesclagem de regras (sistema + usuário)
+│       │   ├── regex_rules.py      # Regras dinâmicas baseadas em expressões regulares
 │       │   ├── entity_regex.py     # Reconhecimento de entidades e padronização de nomes
 │       │   └── confidence.py       # Algoritmos de ponderação de confiança
 │       ├── extraction/             # Módulos de extração de conteúdo
@@ -319,9 +320,7 @@ Indexo/
 │   └── test_ui_flow.py                          # Testes de fluxo e componentes de interface
 │
 └── Portable-EXE/                   # Distribuição portátil autônoma consolidada
-    ├── Indexo-Portable/            # Pasta da distribuição final do executável
-    │   ├── Indexo.exe              # Executável portátil 100% autônomo para Windows
-    │   └── ...                     # Dependências empacotadas
+    ├── Indexo.exe                  # Executável portátil 100% autônomo para Windows (PyInstaller --onefile)
     └── README.md                   # Guia de uso da versão portátil
 ```
 
@@ -419,7 +418,7 @@ python scripts/build.py
 ```
 
 O executável final será gerado em:
-`Portable-EXE/Indexo-Portable/Indexo.exe`
+`Portable-EXE/Indexo.exe`
 
 ---
 

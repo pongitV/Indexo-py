@@ -7,7 +7,7 @@
 
 ---
 
-## 📦 Como Funciona a Versão Portátil
+## Como Funciona a Versão Portátil
 
 O **Indexo Portable** foi projetado para operar com isolamento total do sistema operacional Windows:
 * **Sem Instaladores**: Não requer privilégios de administrador para rodar.
@@ -16,7 +16,7 @@ O **Indexo Portable** foi projetado para operar com isolamento total do sistema 
 
 ---
 
-## 📁 Estrutura de Pastas Gerada Automaticamente
+## Estrutura de Pastas Gerada Automaticamente
 
 Ao executar o `Indexo.exe` pela primeira vez, ele inicializa a seguinte estrutura local:
 
@@ -39,15 +39,15 @@ Portable-EXE/
 
 ---
 
-## 🛠️ Recursos de IA Integrados
+## Recursos de IA Integrados
 
 * **Busca Semântica no `Ctrl+K`**: Indexação vetorial ultraleve (ONNX Multilingual MiniLM ~60 MB) para encontrar arquivos por conceito e sinônimos.
 * **Classificação com IA Local**: Suporte ao modelo **Qwen 2.5 (1.5B / 0.5B / 3B)** para raciocínio profundo de pastas e tags estruturadas em JSON sem sair do computador.
-* **Download Sob Demanda**: Os modelos de IA podem ser baixados em 1 clique diretamente nas Configurações (`⚙️`) do aplicativo.
+* **Download Sob Demanda**: Os modelos de IA podem ser baixados em 1 clique diretamente nas Configurações (`Ctrl+,`) do aplicativo.
 
 ---
 
-## 🔄 Como Recompilar a Versão Portátil
+## Como Recompilar a Versão Portátil
 
 Para gerar um novo executável portátil após modificar o código-fonte:
 

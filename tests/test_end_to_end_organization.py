@@ -22,6 +22,9 @@ import indexo_core
 def test_end_to_end_scan_on_test_dataset():
     """Runs complete IndexWorker scanning pipeline on pasta_testes_indexo."""
     dataset_dir = root_dir / "pasta_testes_indexo"
+    if not dataset_dir.exists():
+        import subprocess
+        subprocess.run([sys.executable, str(root_dir / "scripts" / "generate_test_dataset.py")], check=True)
     assert dataset_dir.exists(), "pasta_testes_indexo must exist"
 
     worker = IndexWorker(root_dir=dataset_dir)

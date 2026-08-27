@@ -15,22 +15,28 @@ rust-core/
     │
     ├── indexing/               # Varredura concorrente e persistencia
     │   ├── scanner.rs          # Varredura paralela de diretorios via Rayon
-    │   ├── hasher.rs           # Calculo de hash SHA-256 e deteccao de duplicatas
-    │   ├── db.rs               # Interface SQLite FTS5 em modo WAL com cache
-    │   └── sanitizer.rs        # Validacao e sanitizacao de nomes de arquivo no Windows
+    │   ├── database.rs         # Interface SQLite FTS5 em modo WAL com cache
+    │   ├── hashing.rs          # Calculo de hash SHA-256 e deteccao de duplicatas
+    │   ├── sanitize.rs         # Validacao e sanitizacao de nomes de arquivo no Windows
+    │   ├── migrations.rs       # Versionamento e migracoes do esquema SQLite
+    │   └── mod.rs              # Modulo de indexacao e integracao
     │
     ├── extraction/             # Extracao de metadados e conteudo textual
     │   ├── text.rs             # Leitura rapida de arquivos TXT/CSV/LOG
-    │   ├── exif.rs             # Extracao de campos EXIF em imagens JPEG/TIFF
-    │   └── audio.rs            # Leitura de metadados de audio (tags ID3)
+    │   ├── image.rs            # Extracao de campos EXIF e dimensoes em imagens
+    │   ├── audio.rs            # Leitura de metadados de audio (tags ID3)
+    │   └── mod.rs              # Modulo de extracao de metadados
     │
     ├── classification/         # Mecanismo de pontuacao semantica
+    │   ├── engine.rs           # Motor central de classificacao deterministica
     │   ├── matcher.rs          # Algoritmos Aho-Corasick e RegexSet linear
-    │   └── scorer.rs           # Motor de scoring ponderado 70/20/10
+    │   ├── scoring.rs          # Motor de scoring ponderado e normalizacao
+    │   └── mod.rs              # Modulo de classificacao nativa
     │
     └── utils/                  # Tratamento de caminhos e verificacoes de seguranca
-        ├── paths.rs            # Normalizacao e caminhos portateis
-        └── safety.rs           # Politicas de protecao do sistema operacional
+        ├── path_resolver.rs    # Normalizacao e prevencao de Directory Traversal
+        ├── error_handler.rs    # Tratamento e conversao de erros nativos para PyErr
+        └── mod.rs              # Modulo de utilitarios de baixo nivel
 ```
 
 ---

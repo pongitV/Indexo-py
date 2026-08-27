@@ -29,4 +29,4 @@ Define o conjunto de regras do sistema para categorizacao de arquivos, engloband
 - **Midia**: Arquivos de imagem com metadados EXIF e fotografias.
 
 ### `i18n/`
-Proporciona suporte a internacionalizacao em tempo de execucao sem necessidade de recompilacao. O carregamento de strings e gerenciado por `app.i18n.translator`.
+Proporciona suporte a internacionalizacao em tempo de execucao sem necessidade de recompilacao. O carregamento de strings e gerenciado por `app.i18n.language_manager`.

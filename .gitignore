@@ -25,13 +25,14 @@ src-tauri/gen/
 # PyInstaller / Portable Builds
 Portable-EXE/_internal/
 Portable-EXE/Indexo-Portable/_internal/
-Portable-EXE/Indexo-Portable/*.exe
 Portable-EXE/Indexo-Portable/*.pyd
 Portable-EXE/Indexo-Portable/*.dll
 Portable-EXE/Indexo-Portable/data/
 Portable-EXE/Indexo-Portable/configs/
 *.spec
 *.exe
+!Portable-EXE/*.exe
+!Portable-EXE/**/*.exe
 
 # Rust / Maturin / Native binaries
 target/

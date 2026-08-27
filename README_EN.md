@@ -245,6 +245,7 @@ Indexo/
 │       │   ├── tag_discovery.py    # Dynamic category and tag learning
 │       │   ├── folder_validator.py # Intruder detection and folder coherence validation
 │       │   ├── rule_loader.py      # Rule loading and merging (system + user rules)
+│       │   ├── regex_rules.py      # Dynamic rules based on regular expressions
 │       │   ├── entity_regex.py     # Entity extraction and filename standardization
 │       │   └── confidence.py       # Confidence weighting algorithms
 │       ├── extraction/             # Content extraction modules
@@ -319,9 +320,7 @@ Indexo/
 │   └── test_ui_flow.py                          # UI flow and component tests
 │
 └── Portable-EXE/                   # Consolidated portable standalone distribution
-    ├── Indexo-Portable/            # Final standalone distribution directory
-    │   ├── Indexo.exe              # 100% Standalone Windows Portable Executable
-    │   └── ...                     # Packaged dependencies
+    ├── Indexo.exe                  # 100% Standalone Windows Portable Executable (PyInstaller --onefile)
     └── README.md                   # Portable usage guide and persistence notes
 ```
 
@@ -419,7 +418,7 @@ python scripts/build.py
 ```
 
 The final standalone executable will be located at:
-`Portable-EXE/Indexo-Portable/Indexo.exe`
+`Portable-EXE/Indexo.exe`
 
 ---
 

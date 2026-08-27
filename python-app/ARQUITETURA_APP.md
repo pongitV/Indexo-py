@@ -26,6 +26,7 @@ python-app/
     │   ├── tag_discovery.py    # Síntese adaptativa de tags e categorias baseada na topologia real
     │   ├── folder_validator.py # Validação de coerência de pastas e detecção de arquivos intrusos
     │   ├── rule_loader.py      # Carregador e mesclador de regras do sistema e do usuário
+    │   ├── regex_rules.py      # Regras dinâmicas baseadas em expressões regulares e padrões
     │   ├── confidence.py       # Algoritmos de cálculo de pontuação e limiares de confiança
     │   └── entity_regex.py     # Reconhecimento de entidades e padronização de nomenclatura de arquivos
     │

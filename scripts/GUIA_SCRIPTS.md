@@ -30,9 +30,8 @@ Executa o pipeline completo de compilacao e empacotamento:
 1. Gera os icones multi-resolucao do Windows (`icon.ico`).
 2. Compila a extensao nativa em Rust utilizando `maturin` em modo release e instala o binario wheel gerado.
 3. Injeta os metadados de versao PE do Windows (`VS_VERSION_INFO`) no binario.
-4. Empacota a aplicacao com `PyInstaller` em modo de diretorio unico isolado (`Portable-EXE/Indexo-Portable`).
-5. Copia os recursos essenciais (`system_rules.json`, dicionarios `i18n`, icones e guias).
-6. Solicita a atualizacao do cache de icones do Windows Explorer via chamada de sistema.
+4. Empacota a aplicacao com `PyInstaller` em executavel unico 100% autonomo e portatil (`Portable-EXE/Indexo.exe` via `--onefile`) com todos os recursos e modelos embutidos.
+5. Notifica o Windows Explorer para atualizar o cache de icones imediatamente via chamada Win32.
 
 ```powershell
 python scripts/build.py
